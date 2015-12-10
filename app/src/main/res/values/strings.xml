@@ -10,7 +10,7 @@
     <string name="with_tips">(с чаевыми)</string>
     <string name="button_tips">Рассчитать с чаевыми !  </string>
     <string name="text_sb">Данные очищены</string>
-    <string name="about">Версия 1.0 </string>
+    <string name="about">Версия 1.0.1 </string>
     <string name="title_activity_about">О программе</string>
     <string name="about_app">Программа предназначена для деления счёта на количество людей</string>
     <string name="contact">По вопросам и предложениям пишите на почту: rudenko.al.iv@gmail.com</string>
