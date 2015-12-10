@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Check, please !</string>
+    <string name="about">Version 1.0</string>
+    <string name="action_settings">About</string>
+    <string name="button">Calculate !</string>
+    <string name="button_tips">Calculate with tip !</string>
+    <string name="peoples">Peoples</string>
+    <string name="result2">Each will pay</string>
+    <string name="summ">Sum</string>
+    <string name="text_sb">Data was cleared</string>
+    <string name="title_activity_about">About</string>
+    <string name="toast">Enter data</string>
+    <string name="about_app">The program is designed to divide the bill by the number of people</string>
+    <string name="contact">For questions and suggestions please contact me by email: rudenko.al.iv@gmail.com</string>
+    <string name="with_tips">(with tip)</string>
+
+</resources>

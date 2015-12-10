@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about"
+        android:id="@+id/version_tv"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal|top"
+        android:padding="70dp"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/about_app"
+        android:id="@+id/about_app"
+        android:textColor="@android:color/black"
+        android:textSize="23sp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/ib_play_store"
+            android:background="@drawable/play_store"
+            android:layout_margin="20dp"
+            android:onClick="onPlayStoreClick"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/ib_mail"
+            android:background="@drawable/mail"
+            android:layout_margin="20dp"
+            android:onClick="onMailClick"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/ib_rate"
+            android:background="@drawable/rate"
+            android:layout_margin="20dp"
+            android:onClick="onRateClick"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
