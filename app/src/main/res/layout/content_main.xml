@@ -24,7 +24,7 @@
             android:id="@+id/editSumm"
             android:layout_column="7"
             android:layout_row="0"
-            android:hint="@string/hint1" />
+            android:hint="@string/hint2" />
 
     <EditText
             android:layout_width="match_parent"
@@ -34,7 +34,7 @@
             android:id="@+id/editPeople"
             android:layout_column="7"
             android:layout_row="3"
-            android:hint="@string/hint2" />
+            android:hint="@string/hint1" />
 
 
 </GridLayout>

@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Рахунок, будь ласка !</string>
-    <string name="about">Програма версії 1.0</string>
+    <string name="about">Програма версії 1.0.1</string>
     <string name="action_settings">Про програму</string>
     <string name="button">Розрахувати !</string>
     <string name="button_tips">Розрахувати з чайовими !</string>
-    <string name="peoples">Люди</string>
     <string name="result2">Кожен заплатить</string>
-    <string name="summ">Сума</string>
     <string name="text_sb">Дані очищені</string>
     <string name="title_activity_about">Про програму</string>
     <string name="toast">Введіть дані</string>
     <string name="about_app">Програма призначена для поділу рахунку на кількість людей</string>
-    <string name="contact">З питань і пропозицій пишіть на пошту: rudenko.al.iv@gmail.com</string>
     <string name="with_tips">(з чайовими)</string>
+    <string name="hint1">Введіть кількість людей</string>
+    <string name="hint2">Введіть суму рахунку</string>
 
 </resources>
