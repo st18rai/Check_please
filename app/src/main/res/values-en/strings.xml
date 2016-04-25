@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Check, please !</string>
-    <string name="about">Version 1.0.1</string>
+    <string name="about">Version 1.1</string>
     <string name="action_settings">About</string>
     <string name="button">Calculate !</string>
     <string name="button_tips">Calculate with tip !</string>

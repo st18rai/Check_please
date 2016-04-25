@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Рахунок, будь ласка !</string>
-    <string name="about">Програма версії 1.0.1</string>
+    <string name="about">Програма версії 1.1</string>
     <string name="action_settings">Про програму</string>
     <string name="button">Розрахувати !</string>
     <string name="button_tips">Розрахувати з чайовими !</string>
