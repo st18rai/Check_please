@@ -6,11 +6,16 @@
     <string name="toast">Введите данные </string>
     <string name="result2">Каждый заплатит  </string>
     <string name="with_tips">(с чаевыми)</string>
-    <string name="button_tips">Рассчитать с чаевыми !  </string>
     <string name="text_sb">Данные очищены</string>
-    <string name="about">Версия 1.1 </string>
+    <string name="about">Версия 1.2 </string>
     <string name="title_activity_about">О программе</string>
     <string name="about_app">Программа предназначена для деления счёта на количество людей</string>
     <string name="hint1">Введите количество людей</string>
     <string name="hint2">Введите сумму счёта</string>
+    <string name="checkbox_text">Чаевые,  %</string>
+    <string-array name="tips">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
 </resources>

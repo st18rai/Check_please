@@ -13,7 +13,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +26,9 @@ public class MainActivity extends BaseActivity {
     private EditText mEditSumm;
     private EditText mEditPeople;
     private TextView mTextResult;
+    private CheckBox mCheckbox;
+    private Spinner mSpinner;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +45,8 @@ public class MainActivity extends BaseActivity {
                 mEditSumm.setText(null);
                 mEditPeople.setText(null);
                 mTextResult.setText(null);
+                mCheckbox.setChecked(false);
+                mSpinner.setSelection(0);
                 Snackbar.make(view, R.string.text_sb, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
@@ -49,6 +56,9 @@ public class MainActivity extends BaseActivity {
         mEditSumm = (EditText) findViewById(R.id.editSumm);
         mEditPeople = (EditText) findViewById(R.id.editPeople);
         mTextResult = (TextView) findViewById(R.id.tvResult);
+        mCheckbox = (CheckBox) findViewById(R.id.checkBox);
+        mSpinner = (Spinner) findViewById(R.id.spinner);
+
 
 
         Animation anim = null;
@@ -95,35 +105,23 @@ public class MainActivity extends BaseActivity {
             return;
         }
 
-
-
         double inputSumm = Double.parseDouble(mEditSumm.getText().toString());
         double inputPeople = Double.parseDouble(mEditPeople.getText().toString());
-        double result = inputSumm / inputPeople;
-        double result2 = ((int)(result * 100)/100.00);
-        mTextResult.setText(getResources().getString(R.string.result2) + " " + result2);
+        if (mCheckbox.isChecked()){
+            int tips = Integer.valueOf(mSpinner.getSelectedItem().toString());
+            double result = inputSumm / inputPeople;
+            double result3 = (result * tips)/100 + result;
+            double result4 = ((int)(result3 * 100)/100.00);
+            mTextResult.setText(getResources().getString(R.string.result2) + " " + result4 + " " + getResources().getString(R.string.with_tips));
 
-
-
-    }
-
-    public void onButtonTipsClick(View view) {
-
-
-        if (TextUtils.isEmpty(mEditSumm.getText().toString())
-                || TextUtils.isEmpty(mEditPeople.getText().toString())) {
-            Toast toast = Toast.makeText(this, R.string.toast, Toast.LENGTH_LONG);
-            toast.setGravity(Gravity.CENTER, 0, 20);
-            toast.show();
-            return;
+        }
+        else {
+            double result = inputSumm / inputPeople;
+            double result2 = ((int) (result * 100) / 100.00);
+            mTextResult.setText(getResources().getString(R.string.result2) + " " + result2);
         }
 
-        double inputSumm = Double.parseDouble(mEditSumm.getText().toString());
-        double inputPeople = Double.parseDouble(mEditPeople.getText().toString());
-        double result = inputSumm / inputPeople;
-        double result3 = (result / 10) + result;
-        double result4 = ((int)(result3 * 100)/100.00);
-        mTextResult.setText(getResources().getString(R.string.result2) + " " + result4 + " " + getResources().getString(R.string.with_tips));
 
     }
+
 }

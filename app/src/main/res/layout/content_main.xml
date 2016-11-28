@@ -9,35 +9,47 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main" tools:context=".MainActivity">
 
-<GridLayout
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:id="@+id/gridLayout">
-
+    android:orientation="vertical">
 
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberSigned|numberDecimal"
-            android:ems="10"
             android:id="@+id/editSumm"
-            android:layout_column="7"
-            android:layout_row="0"
             android:hint="@string/hint2" />
 
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberSigned|numberDecimal"
-            android:ems="10"
             android:id="@+id/editPeople"
-            android:layout_column="7"
-            android:layout_row="3"
             android:hint="@string/hint1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <CheckBox
+            android:text="@string/checkbox_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:entries="@array/tips" />
+
+    </LinearLayout>
 
 
-</GridLayout>
+
+</LinearLayout>
 
 
 
@@ -61,17 +73,6 @@
         style="?android:attr/borderlessButtonStyle"
         android:layout_margin="5dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonTips"
-        android:text="@string/button_tips"
-        android:textColor="@android:color/white"
-        android:onClick="onButtonTipsClick"
-        android:background="@drawable/states_button"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_margin="5dp"/>
-
 </LinearLayout>
 
     <TextView
@@ -84,5 +85,6 @@
         android:id="@+id/tvResult"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="155dp" />
+
 
 </RelativeLayout>
