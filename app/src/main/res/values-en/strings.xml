@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Check, please !</string>
-    <string name="about">Version 1.2</string>
+    <string name="about">Version </string>
     <string name="action_settings">About</string>
     <string name="button">Calculate !</string>
     <string name="result2">Each will pay</string>
@@ -13,5 +13,10 @@
     <string name="hint1">Enter the number of persons</string>
     <string name="hint2">Enter the total bill</string>
     <string name="checkbox_text">Tips,  %</string>
+    <string-array name="tips">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
 
 </resources>

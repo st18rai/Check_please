@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Рахунок, будь ласка !</string>
-    <string name="about">Програма версії 1.2</string>
+    <string name="about">Програма версії </string>
     <string name="action_settings">Про програму</string>
     <string name="button">Розрахувати !</string>
     <string name="result2">Кожен заплатить</string>
@@ -13,5 +13,10 @@
     <string name="hint1">Введіть кількість людей</string>
     <string name="hint2">Введіть суму рахунку</string>
     <string name="checkbox_text">Чайові,  %</string>
+    <string-array name="tips">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
 
 </resources>

@@ -7,7 +7,7 @@
     <string name="result2">Каждый заплатит  </string>
     <string name="with_tips">(с чаевыми)</string>
     <string name="text_sb">Данные очищены</string>
-    <string name="about">Версия 1.2 </string>
+    <string name="about">Версия </string>
     <string name="title_activity_about">О программе</string>
     <string name="about_app">Программа предназначена для деления счёта на количество людей</string>
     <string name="hint1">Введите количество людей</string>

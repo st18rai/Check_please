@@ -8,8 +8,8 @@ android {
         applicationId "com.st18apps.st18r.checkplease"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 5
-        versionName "1.1"
+        versionCode 6
+        versionName "1.2b"
     }
     buildTypes {
         release {

@@ -18,6 +18,8 @@ public class AboutActivity extends BaseActivity {
 
     private TextView version_tv;
     private TextView about_app;
+    private String version_name = BuildConfig.VERSION_NAME;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,8 @@ public class AboutActivity extends BaseActivity {
 
         version_tv = (TextView) findViewById(R.id.version_tv);
         about_app = (TextView) findViewById(R.id.about_app);
+
+        version_tv.setText(getResources().getString(R.string.about) + " " + version_name);
 
         Animation anim = null;
         anim = AnimationUtils.loadAnimation(this, R.anim.myscale);

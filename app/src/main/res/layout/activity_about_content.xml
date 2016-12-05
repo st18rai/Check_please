@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
 
@@ -38,7 +39,8 @@
             android:background="@drawable/play_store"
             android:layout_margin="20dp"
             android:onClick="onPlayStoreClick"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            tools:ignore="ContentDescription" />
 
         <ImageButton
             android:layout_width="80dp"
@@ -47,7 +49,8 @@
             android:background="@drawable/mail"
             android:layout_margin="20dp"
             android:onClick="onMailClick"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            tools:ignore="ContentDescription" />
 
         <ImageButton
             android:layout_width="80dp"
@@ -56,7 +59,8 @@
             android:background="@drawable/rate"
             android:layout_margin="20dp"
             android:onClick="onRateClick"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            tools:ignore="ContentDescription" />
 
 
     </LinearLayout>
