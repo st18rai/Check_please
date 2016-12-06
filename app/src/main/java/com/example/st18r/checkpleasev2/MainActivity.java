@@ -23,7 +23,7 @@ import android.widget.Toast;
 
 public class MainActivity extends BaseActivity {
 
-    private EditText mEditSumm;
+    private EditText mEditSum;
     private EditText mEditPeople;
     private TextView mTextResult;
     private CheckBox mCheckbox;
@@ -41,25 +41,23 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
 
-
-                mEditSumm.setText(null);
+                mEditSum.setText(null);
                 mEditPeople.setText(null);
                 mTextResult.setText(null);
                 mCheckbox.setChecked(false);
                 mSpinner.setSelection(0);
+
                 Snackbar.make(view, R.string.text_sb, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
             }
         });
 
-        mEditSumm = (EditText) findViewById(R.id.editSumm);
+        mEditSum = (EditText) findViewById(R.id.editSumm);
         mEditPeople = (EditText) findViewById(R.id.editPeople);
         mTextResult = (TextView) findViewById(R.id.tvResult);
         mCheckbox = (CheckBox) findViewById(R.id.checkBox);
         mSpinner = (Spinner) findViewById(R.id.spinner);
-
-
 
         Animation anim = null;
         anim = AnimationUtils.loadAnimation(this, R.anim.myscale);
@@ -82,12 +80,11 @@ public class MainActivity extends BaseActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-
         Intent intent = new Intent(MainActivity.this,AboutActivity.class);
         startActivity(intent);
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.about_app) {
             return true;
         }
 
@@ -96,8 +93,7 @@ public class MainActivity extends BaseActivity {
 
     public void onButtonClick(View view) {
 
-
-        if (TextUtils.isEmpty(mEditSumm.getText().toString())
+        if (TextUtils.isEmpty(mEditSum.getText().toString())
                 || TextUtils.isEmpty(mEditPeople.getText().toString())) {
             Toast toast = Toast.makeText(this, R.string.toast, Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER, 0, 20);
@@ -105,23 +101,20 @@ public class MainActivity extends BaseActivity {
             return;
         }
 
-        double inputSumm = Double.parseDouble(mEditSumm.getText().toString());
+        double inputSum = Double.parseDouble(mEditSum.getText().toString());
         double inputPeople = Double.parseDouble(mEditPeople.getText().toString());
+
         if (mCheckbox.isChecked()){
             int tips = Integer.valueOf(mSpinner.getSelectedItem().toString());
-            double result = inputSumm / inputPeople;
-            double result3 = (result * tips)/100 + result;
-            double result4 = ((int)(result3 * 100)/100.00);
-            mTextResult.setText(getResources().getString(R.string.result2) + " " + result4 + " " + getResources().getString(R.string.with_tips));
-
+            double result = inputSum / inputPeople;
+            double resultWithTips = (result * tips)/100 + result;
+            double roundedResult = ((int)(resultWithTips * 100)/100.00);
+            mTextResult.setText(getResources().getString(R.string.result2) + " " + roundedResult + " " + getResources().getString(R.string.with_tips));
         }
         else {
-            double result = inputSumm / inputPeople;
-            double result2 = ((int) (result * 100) / 100.00);
-            mTextResult.setText(getResources().getString(R.string.result2) + " " + result2);
+            double result = inputSum / inputPeople;
+            double roundedResult = ((int) (result * 100) / 100.00);
+            mTextResult.setText(getResources().getString(R.string.result2) + " " + roundedResult);
         }
-
-
     }
-
 }

@@ -5,8 +5,6 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.Animation;
@@ -16,9 +14,9 @@ import android.widget.Toast;
 
 public class AboutActivity extends BaseActivity {
 
-    private TextView version_tv;
-    private TextView about_app;
-    private String version_name = BuildConfig.VERSION_NAME;
+    private TextView mVersionTv;
+    private TextView mAboutApp;
+    private String mVersionName = BuildConfig.VERSION_NAME;
 
 
     @Override
@@ -31,16 +29,16 @@ public class AboutActivity extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        version_tv = (TextView) findViewById(R.id.version_tv);
-        about_app = (TextView) findViewById(R.id.about_app);
+        mVersionTv = (TextView) findViewById(R.id.version_tv);
+        mAboutApp = (TextView) findViewById(R.id.about_app);
 
-        version_tv.setText(getResources().getString(R.string.about) + " " + version_name);
+        mVersionTv.setText(getResources().getString(R.string.about) + " " + mVersionName);
 
         Animation anim = null;
         anim = AnimationUtils.loadAnimation(this, R.anim.myscale);
-        about_app.startAnimation(anim);
+        mAboutApp.startAnimation(anim);
         anim = AnimationUtils.loadAnimation(this, R.anim.myalpha);
-        version_tv.startAnimation(anim);
+        mVersionTv.startAnimation(anim);
 
 
     }
